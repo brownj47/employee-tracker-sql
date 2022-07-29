@@ -8,8 +8,8 @@ Click [here](here) to see a video walkthrough of the application.
 
 ## Installation
 
-1. Clone the repo found at this link: [employee-tracker-sql]()
-2. Install MySQL following this guide: [employee-tracker-sql]()
+1. Clone the repo found at this link: [https://github.com/brownj47/employee-tracker-sql](https://github.com/brownj47/employee-tracker-sql)
+2. Install MySQL following this guide: [https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide)
 3. Run the command 'mysql -u root -p' in the terminal while in the root directory of the cloned repo to open mysql.
 4. From the root directory of the repo, run 'SOURCE db/schema.sql;' then 'SOURCE db/seeds.sql;' to create the data structure for your application and seed them with data.
 5. Run the command 'exit;' to exit mysql.
