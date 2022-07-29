@@ -1,3 +1,5 @@
+//TODO: add a way to quit
+
 const inquirer = require('inquirer')
 const mysql2 = require('mysql2')
 const cnsltble = require('console.table')
@@ -82,6 +84,7 @@ function addDept() {
                 throw Error(err)
             }
             console.table(results)
+            mainMenLoop();
         })
     })
 }
@@ -111,7 +114,8 @@ function addRole() {
                 throw Error(err)
             }
             console.table(results)
-        })
+            mainMenLoop();
+        });
     })
 }
 function addEmp() {
@@ -145,7 +149,8 @@ function addEmp() {
                 throw Error(err)
             }
             console.table(results)
-        })
+            mainMenLoop();
+        });
     })
 }
 function updateEmp() {
@@ -179,8 +184,9 @@ function updateEmpQs(){
         db.query(`UPDATE employees SET role_id = ? WHERE id = ?;`, [resp.newRole, resp.EID], function (err, results) {
             if (err) {
                 throw Error(err)
-            }
-            console.table(results)
+            };
+            console.table(results);
+            mainMenLoop();
         })
     })
 }
