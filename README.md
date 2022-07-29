@@ -14,7 +14,7 @@ Click [here](here) to see a video walkthrough of the application.
 4. From the root directory of the repo, run 'SOURCE db/schema.sql;' then 'SOURCE db/seeds.sql;' to create the data structure for your application and seed them with data.
 5. Run the command 'exit;' to exit mysql.
 6. Run npm i to install the node modules.
-7. You're all set!!
+7. Add the text of the password you created for MySQL to the password key in index.js on line 11.
 
 
 ## Usage

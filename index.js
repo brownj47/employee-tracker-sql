@@ -8,7 +8,7 @@ const cnsltble = require('console.table')
 const db = mysql2.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'password',
+    password: '',
     database: 'company_db'
 });
 
