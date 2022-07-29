@@ -4,7 +4,7 @@
 
 A command line application using node.js. It allows a user to create a database for their company structure. It allows them to add departments, roles, and employees in a relational data structure. To accomplish this goal I used the npm packages inquirer and mysql2, as well as MySQL. I learned about SQL syntax, querying databases with javascript, callback functions/promises/synchronicity, and how to use .gitignore files. 
 
-Click [here](here) to see a video walkthrough of the application.
+Click [here](https://drive.google.com/file/d/1sy7zXnRgScy2vatvd-2gj4UVSWIGBINu/view) to see a video walkthrough of the application.
 
 ## Installation
 
