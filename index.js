@@ -46,8 +46,10 @@ function mainMenLoop() {
                 });
                 break
             case 'add a department':
+                addDept();
                 break
             case 'add a role':
+                addRole();
                 break
             case 'add an employee':
                 break
@@ -66,3 +68,79 @@ function mainMenLoop() {
 };
 
 mainMenLoop();
+
+function addDept() {
+    inquirer.prompt(
+        [{
+            type: 'input',
+            name: 'deptName',
+            message: 'Type the name of the department you are adding.'
+        }]
+    ).then(resp => {
+        db.query(`INSERT INTO departments(name)
+        VALUES(?);`, resp.deptName, function (err, results) {
+            if (err) {
+                throw Error(err)
+            }
+            console.table(results)
+        })
+    })
+}
+function addRole() {
+    inquirer.prompt(
+        [
+            {
+                type: 'input',
+                name: 'roleName',
+                message: 'Type the title of the role you are adding.'
+            },
+            {
+                type: 'input',
+                name: 'salary',
+                message: 'Type the salary for this role.'
+            },
+            {
+                type: 'input',
+                name: 'depID',
+                message: 'Type the ID of the department for this role.'
+            }
+        ]
+    ).then(resp => {
+        db.query(`INSERT INTO roles(salary, title, dep_id)
+        VALUES(?, ?, ?);`, [resp.salary,resp.roleName, resp.depID ], function (err, results) {
+            if (err) {
+                throw Error(err)
+            }
+            console.table(results)
+        })
+    })
+}
+function addEmp() {
+    inquirer.prompt(
+        [
+            {
+                type: 'input',
+                name: 'roleName',
+                message: 'Type the title of the role you are adding.'
+            },
+            {
+                type: 'input',
+                name: 'salary',
+                message: 'Type the salary for this role.'
+            },
+            {
+                type: 'input',
+                name: 'depID',
+                message: 'Type the ID of the department for this role.'
+            }
+        ]
+    ).then(resp => {
+        db.query(`INSERT INTO roles(salary, title, dep_id)
+        VALUES(?, ?, ?);`, [resp.salary,resp.roleName, resp.depID ], function (err, results) {
+            if (err) {
+                throw Error(err)
+            }
+            console.table(results)
+        })
+    })
+}
